@@ -55,7 +55,7 @@ wavelengths = []
 nmi_raw_list, nmi_aligned_list = [], []
 ssim_raw_list, ssim_aligned_list = [], []
 
-print("\n⚙️ Расчет метрик по каждому каналу...\n")
+print("\n Расчет метрик по каждому каналу...\n")
 print(f"{'Длина волны':<13} | {'NMI (ДО -> ПОСЛЕ)':<22} | {'SSIM (ДО -> ПОСЛЕ)':<22}")
 print("-" * 65)
 

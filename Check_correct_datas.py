@@ -25,7 +25,7 @@ MASK_ALIGNED_PATH = r"C:\Users\artem\OneDrive\Рабочий стол\123\667160
 # ==========================================
 def load_binary_mask(path):
     if not os.path.exists(path):
-        raise FileNotFoundError(f"❌ Маска не найдена: {path}")
+        raise FileNotFoundError(f"Маска не найдена: {path}")
 
     mask_bytes = np.fromfile(path, dtype=np.uint8)
     mask_img = cv2.imdecode(mask_bytes, cv2.IMREAD_GRAYSCALE)
@@ -49,9 +49,9 @@ mean_aligned = np.mean(arr_aligned[mask_aligned])
 diff = abs(mean_raw - mean_aligned)
 
 print("\n" + "=" * 40)
-print(f"📊 Средняя яркость ДО выравнивания: {mean_raw:.3f}")
-print(f"📊 Средняя яркость ПОСЛЕ FFT:       {mean_aligned:.3f}")
-print(f"📉 Абсолютная ошибка интерполяции:  {diff:.3f}")
+print(f"Средняя яркость ДО выравнивания: {mean_raw:.3f}")
+print(f"Средняя яркость ПОСЛЕ FFT:       {mean_aligned:.3f}")
+print(f"Абсолютная ошибка интерполяции:  {diff:.3f}")
 print("=" * 40 + "\n")
 
 # ==========================================
